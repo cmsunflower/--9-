@@ -5,7 +5,7 @@ function longestValidParentheses(s){
         else{
             st.pop();
             if(st.length){
-                ans=Math.max(ans,st[st.length-1]-i);
+                ans=Math.max(ans,i-st[st.length-1]);
             }else{
                 st.push(i);
             }
