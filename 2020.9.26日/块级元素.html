@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .span{
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <span class="span">22222</span>
+    <script>
+        var a = 1;
+            function fn(a) {
+                a = 2;
+            }
+            fn(a);
+            console.log(a);
+            var a={a:1};
+            function fn(a){
+                a.a=2;
+            }
+            fn(a);
+            console.log(a.a);
+    </script>
+</body>
+</html>
