@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* .father{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        } */
+        /* 使用 子绝父相 margin进行定位 -- 顶宽高 */
+        /* .father{
+            position:relative;
+            height:600px;
+            border:1px solid red;
+        }
+        .son{
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:200px;
+            height:200px;
+            margin:-100px 0 0 -100px;
+        } */
+        /* 使用transform实现定位 -- 子元素不用设置高度 宽度 但是要有内容*/
+        /* .father{
+            position: relative;
+            height:600px;
+            border:1px solid red;
+        }
+        .son{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        } */
+        /* 使用子绝父相 calc实现定位 */
+        /* .father{
+            height:600px;
+            position:relative;
+            border:1px solid red;
+        }
+        .son{
+            width:200px;
+            height:200px;
+            position:absolute;
+            top:calc(50% - 100px);
+            left:calc(50% - 100px);
+        } */
+        /* 修改块级元素为 行内块级元素设置定位 */
+        /* .father{
+            text-align:center;
+            border:1px solid red;
+        }
+        .son{
+            display:inline-block;
+            vertical-align: middle; */
+             /* 这样 child 内的文字就不会超出跑到下面 */
+             /* line-height: initial;
+        } */
+        /* .father{
+            display:table;
+            width:100%;
+            height:100%;
+            border:1px solid red;
+        }
+        .son{
+            display:table-cell;
+            text-align:center;
+            vertical-align: middle;
+        } */
+        .father{
+           height:150px;
+    position: relative;
+            border:1px solid red;
+        }
+        .son{
+    position: absolute; 
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+    text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">2222
+            2222222222</div>
+    </div>
+</body>
+</html>

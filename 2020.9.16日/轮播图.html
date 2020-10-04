@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            list-style:none;
+        }
+        #wrap{
+            /* 图片的宽高 */
+            width:440px;
+            height:489px;
+            /* 水平居中 */
+            margin:200px auto;
+            /* 使用子绝父相进行定位 */
+            position:relative;
+            cursor: pointer;
+        }
+        #pic li{
+            display:none;
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:1;
+        }
+        #num{
+            /* 下面的小图标设置绝对定位 */
+            position: absolute;
+            left:46px;
+            bottom:20px;
+            z-index:2;
+        }
+        #num li{
+            float:left;
+            width:8px;
+            height:8px;
+            margin:5px;
+            /* 设置圆角 */
+            border-radius:50%;
+            border:1px solid red;
+            background-color:pink;
+            text-align: center;
+        }
+        #num li.active{
+            background-color:blue;
+        }
+        /* 箭头的大小 */
+        .arrow{
+            text-decoration: none;
+            z-index:3;
+            height:40px;
+            width:30px;
+            position:absolute;
+            top:50%;
+            margin-top:-20px;
+            line-height: 40px;
+            /* 背景颜色 */
+            background:rgba(0,0,0,.3);
+            display:none;
+            text-align:center;
+        }
+        #wrap:hover .arrow{
+            display:block;
+        }
+        .arrow:hover{
+            background-color: rgba(0,0,0,.7);
+        }
+        #left{
+            left:0;
+        }
+        #right{
+            right:0;
+        }
+        #wrap #pic li:nth-child(1){
+            display:block;
+        }
+        .flexclass{
+            display:flex;
+            flex:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexclass"></div>
+    <div id="wrap">
+        <ul id="pic">
+            <li><img src="1.jpg" alt=""></li>
+            <li><img src="2.jpg" alt=""></li>
+            <li><img src="3.jpg" alt=""></li>
+            <li><img src="4.jpg" alt=""></li>
+            <li><img src="5.jpg" alt=""></li>
+        </ul>
+        <ul id="num">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <a href="javascript:;" class="arrow" id="left">&lt;</a>
+        <a href="javascript:;" class="arrow" id="right">&gt;</a>
+    </div>
+    <script type="text/javascript">
+        function $(id){
+            return document.getElementById(id);
+        }
+        window.onload=function(){
+            // 获取左右
+            var oLeft=$('left');
+            var oRight=$('right');
+            var index=0;
+            var timer=null;
+            // 获取图片显示的li
+            var pic=$('pic').getElementsByTagName('li');
+            // 获取下方小图标显示的li
+            var num=$('num').getElementsByTagName('li');
+            var oDiv=$('wrap');
+
+            oRight.onclick=function(){
+                index++;
+                if(index>=pic.length){
+                    index=0;
+                }
+                change(index);
+            }
+            oLeft.onclick=function(){
+                index--;
+                if(index<0){
+                    index=pic.length-1;
+                }
+                change(index);
+            }
+            oDiv.onmouseover=function(){
+                clearInterval(timer);
+            }
+            oDiv.onmouseout=function(){
+                // 设置定时器 鼠标移除后开始计数
+                timer=setInterval(run,2000);
+            }
+            timer=setInterval(run,4000);
+            function run(){
+                index++;
+                if(index>=pic.length) index=0;
+                change(index);
+            }
+            for(var i=0;i<num.length;i++){
+                num[i].index=1;
+                num[i].onmouseover=function(){
+                    change(this.index);
+                }
+            }
+            function change(cur){
+                for(var i=0;i<pic.length;i++){
+                    pic[i].style.display="none";
+                    num[i].className='';
+                }
+                pic[cur].style.display='block';
+                num[cur].className='active';
+                index=cur;
+            }
+        }
+        window.addEventListener('load',function(){
+            console.log('load执行');
+        },false);
+        window.addEventListener('DOMContentLoaded',function(){
+            console.log('domContentLoad执行');
+        },false);
+    </script>
+</body>
+</html>
