@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2 id="txt"></h2>
+        <input type="text" name="" id="el">
+    </div>
+    <script>
+        let obj = {};
+        let el = document.querySelector('#el');
+        let txt = document.querySelector('#txt');
+        Object.defineProperty(obj, 'foo', {
+            set: function (newValue) {
+                txt.innerHTML = newValue;
+            }
+        })
+        el.addEventListener('input', e => {
+            obj.foo = e.target.value;
+        }) 
+    </script>
+</body>
+</html>

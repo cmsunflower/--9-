@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 使用三栏布局实现 */
+        .container{
+            overflow:hidden;
+            border:1px solid red;
+        }
+        .left{
+            float:left;
+            width:240px;
+            border:1px solid blue;
+        }
+        .right{
+            width:240px;
+            float:right;
+            border:1px solid green;
+        }
+        .center{
+            margin-left:240px;
+            margin-right:240px;
+            border:1px solid pink;
+        }
+        .clearfix:after,.clearfix:before{
+            display:table;
+            content:'';
+        }
+        .clearfix:after{
+            clear:both;
+        }
+        .clearfix{
+            zoom:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">111</div>
+        <div class="right">222</div>
+        <div class="center">333</div>
+    </div>
+</body>
+</html>

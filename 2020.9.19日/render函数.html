@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const element={
+            type:'div',
+            children:[
+                {type:'span',content:'好好学习，天天向上'}
+            ]
+        }
+        function render(obj){
+            let el=document.createDocumentFragment(obj.type);
+            if(obj.children){
+                obj.children.forEach(function(child){
+                    el.appendChild(render(child));
+                })
+            }
+            if(obj.content){
+                console.log(obj.content);
+                el.innerText=obj.content;
+            }
+            console.dir(el);
+            return el;
+        }
+        document.querySelector('div').appendChild(render(element));
+    </script>
+</body>
+</html>

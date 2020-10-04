@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        天气不错，在下雨
+    <script>
+        window.onhashchange=function(e){
+            console.log(e.oldURL,e.newURL);
+            let hash=location.hash.slice(1);
+            document.body.style.color=hash
+        }
+    </script>
+</body>
+</html>

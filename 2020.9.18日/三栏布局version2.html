@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body{
+            margin:0;
+            height:100%;
+        }
+        /* 使用三栏布局实现 */
+        .container{
+            /* position:relative; */
+            /* height:600px; */
+            /* margin:0; */
+            position:relative;
+        }
+        .left,.right{
+            position:absolute;
+            top:0;
+            width:200px;
+            height:100%;
+            border:1px solid blue;
+        }
+        .left{
+            left:0;
+        }
+        .right{
+            right:0;
+        }
+        .center{
+            margin:0 200px;
+            height:100%;
+            border:1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">111</div>
+        <div class="center">333</div>
+        <div class="right">222</div>
+    </div>
+</body>
+
+</html>
