@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      /* p:nth-last-of-type(2){
+          color:red;
+      }
+      p:nth-last-of-type(1){
+          color:blue;
+      } */
+      /* 下面这个不生效 */
+     /* div div:nth-last-child(1){
+          color:#ccc;
+      } */
+      /* p:nth-last-child(odd){
+          color:red;
+      }
+      p:nth-last-child(even){
+          color:blue;
+      } */
+      p:nth-child(6){
+          color:red;
+      }
+      /* p元素作为父元素的最后一个元素颜色设置为蓝色 */
+      div div:last-child{
+          color:blue;
+      }
+      p:last-of-type{
+          color:brown;
+      }
+      p:nth-last-of-type(1){
+          color:aquamarine;
+      }
+    </style>
+</head>
+<body>
+    <div>
+        <p>1</p>
+        <p>2</p>
+        <!-- 这个为红色 -->
+        <p>3</p>
+        <!-- 这个为蓝色 -->
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <div>找工作哦</div>
+    </div>
+</body>
+</html>
