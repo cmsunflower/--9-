@@ -28,6 +28,7 @@ var eraseOverlapIntervals = function(intervals) {
 };
 ```
 [239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)
+
 滑动窗口解决，使用双端队列，队列单调递减（也就是根据数值大小排列，相当于优先级）
 ```jsvascript
 var maxSlidingWindow = function(nums, k) {
