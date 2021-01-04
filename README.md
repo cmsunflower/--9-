@@ -47,3 +47,19 @@ var maxSlidingWindow = function(nums, k) {
     return res;
 };
 ```
+[509. 斐波那契数](https://leetcode-cn.com/problems/fibonacci-number/)
+
+尾调递归优化
+
+每次递归到下一个时候，上一个结束运算
+
+下一次的运算不会影响到上一次的运算，这样就不会出现爆栈的问题
+```javascript
+var fib = function(n){
+    return fibT(0,1,n);
+}
+function fibT(a,b,n){
+    if(a==0) return 0;
+    return fibT(b,a+b,n-1);
+}
+```
