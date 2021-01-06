@@ -63,3 +63,21 @@ function fibT(a,b,n){
     return fibT(b,a+b,n-1);
 }
 ```
+[剑指 Offer 27. 二叉树的镜像](https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/)
+
+二叉树镜像，就是对二叉树做前序遍历的时候，顺便将遍历到的左右进行交换得到的就是最后的镜像二叉树
+```javascript
+var mirrorTree = function(root) {
+    if(root===null) return null;
+    let stack = [root];
+    while(stack.length>0){
+        let node = stack.pop();
+        let temp = node.left;
+        node.left = node.right;
+        node.right = temp;
+        node.right&&stack.push(node.right);
+        node.left&&stack.push(node.left);
+    }
+    return root;
+};
+```
