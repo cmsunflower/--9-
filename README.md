@@ -32,17 +32,18 @@ var eraseOverlapIntervals = function(intervals) {
 滑动窗口解决，使用双端队列，队列单调递减（也就是根据数值大小排列，相当于优先级）
 ```jsvascript
 var maxSlidingWindow = function(nums, k) {
-    let  len = nums.length;
-    let left = 0,right=0;
-    const stack = [];
-    const res =[];
-    while(right<len){
-        if(stack.length&&right-stack[0]>=k) 
-        while(stack.length&&nums[right]>=nums[stack[stack.length-1]]){
+    let n = nums.length;
+    if(n===0) return [];
+    let stack = [],res = [];
+    let right=0;
+    while(right<n){
+        if(stack.length>0&&right-stack[0]>=k) stack.shift();
+        while(stack.length>0&&nums[right]>=nums[stack[stack.length-1]]){
             stack.pop();
         }
-        stack.push(right)
-        if(right>=k-1) res.push()
+        stack.push(right);
+        if(right>=k-1) res.push(nums[stack[0]]);
+        right++;
     }
     return res;
 };
