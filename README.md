@@ -82,3 +82,40 @@ var mirrorTree = function(root) {
     return root;
 };
 ```
+[547. 省份数量](https://leetcode-cn.com/problems/number-of-provinces/)
+
+
+输入：isConnected = [[1,1,0],[1,1,0],[0,0,1]]
+输出：2
+
+最终要求得：图上未联通的点位个数
+
+原本打算使用两层for循环，求1的联通区域，但是联通的点与联通区域不同
+1. 遍历未被访问的点
+2. 遍历到的i层存在1的点(i,j)，交换遍历的位置遍历j层
+3. 如果j层存在这样的点，一直交换，深度遍历
+遍历结束，就增加一个省份
+
+```js
+var findCircleNum = function(isConnected) {
+    let h = isConnected.length;
+    let visited = new Array(h).fill(false);
+    let ans = 0;
+    var dfs = (i)=>{
+        visited[i] =true;
+        for(let j=0;j<h;j++){
+            if(!visited[j]&&isConnected[i][j]===1){
+                dfs(j);
+            }
+        }
+    }
+    for(let i=0;i<h;i++){
+        if(!visited[i]) {
+            dfs(i);
+            ans++;
+        }
+    }
+    return ans;
+};
+```
+
