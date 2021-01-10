@@ -119,3 +119,27 @@ var findCircleNum = function(isConnected) {
 };
 ```
 
+[228. 汇总区间](https://leetcode-cn.com/problems/summary-ranges/)
+
+思路：双指针，符合nums[right+1] === nums[right]+1的在区间内，一直迭代
+    不符合的，就开始新的区间
+    一次迭代，更新right,left指针
+
+```javascript
+var summaryRanges = function(nums) {
+    let len = nums.length;
+    const res = [];
+    if(!len) return [];
+    let left = 0, right = 0;
+    while(right < len){
+        while((right + 1 < len) && (nums[right] + 1 === nums[right+1])){
+            right++;
+        }
+        if(right !== left)res.push(`${nums[left]}->${nums[right]}`);
+        else res.push(`${nums[right]}`);
+        right++;
+        left = right;
+    }
+    return res;
+};
+```
