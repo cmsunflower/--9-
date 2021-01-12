@@ -143,3 +143,28 @@ var summaryRanges = function(nums) {
     return res;
 };
 ```
+[剑指 Offer 33. 二叉搜索树的后序遍历序列]（https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/）
+
+后序遍历顺序：左子树->右子树->根节点
+
+搜索二叉树特点： 左子树的val<根节点的val<右子树的val
+
+假设postorder是正确的后序遍历，那么他符合，[0,left]的节点val<postorder[len-1]，[left+1,len-1]的节点>postorder[len-1]
+
+首先，找到当前postorder数组的左右子树
+在根据左右子树递归遍历，如果最后遍历到根节点，说明是正确的后序遍历
+
+```javascript
+var verifyPostorder = function(postorder) {
+    // 最后一个点就是根节点
+    let len = postorder.length;
+    if(len < 2) return true;
+    let root = postorder[len-1];
+    let temp = 0,i = 0;
+    while(i<len-1&&root>postorder[i]){
+        i++;
+    }
+    let result = postorder.slice(i,len-1).every(x=>x>root);
+    return result&&verifyPostorder(postorder.slice(0,i))&&verifyPostorder(postorder.slice(i,len-1));
+};
+```
