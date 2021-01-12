@@ -143,7 +143,7 @@ var summaryRanges = function(nums) {
     return res;
 };
 ```
-[剑指 Offer 33. 二叉搜索树的后序遍历序列]（https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/）
+[剑指 Offer 33. 二叉搜索树的后序遍历序列](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/)
 
 后序遍历顺序：左子树->右子树->根节点
 
