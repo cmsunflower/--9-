@@ -168,3 +168,58 @@ var verifyPostorder = function(postorder) {
     return result&&verifyPostorder(postorder.slice(0,i))&&verifyPostorder(postorder.slice(i,len-1));
 };
 ```
+[684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection/)
+
+```js
+// 创建并查集的类
+class UnionFind{
+    constructor(n){
+        // 初始化，节点和节点的权值
+        this.node = new Array(n)
+                        .fill()
+                            .map((item,idx) =>
+                                idx
+                            );
+        this.rank = new Array(n).fill(0);
+    }
+    find(x){
+        if(x === this.node[x]){
+            return x;
+        }
+        return this.find(this.node[x]);
+    }
+    union(x, y) {
+        x = this.find(x);
+        y = this.find(y);
+        if (x === y) {
+            return;
+        }
+        if (this.rank[x] < this.rank[y]) {
+            this.node[x] = y;
+        } else {
+            if (this.rank[x] === this.rank[y]) {
+                this.rank[x]++;
+            }
+            this.node[y] = x;
+        }
+    }
+    same(x, y) {
+       return this.find(x) ===this.find(y);
+    }
+}
+// n个节点，n-1条边；因此创建节点的时候，是edges.length+1
+var findRedundantConnection = function(edges) {
+    let len = edges.length;
+    if(len ===0 ) return [];
+    let node = 0;
+    const unionfind = new UnionFind(len+1);
+    for (let i = 0; i < len; i++) {
+        node = edges[i];
+        if(unionfind.same(node[0],node[1])) return node;
+        else{
+            unionfind.union(node[0],node[1]);
+        }
+    }
+    return [0];
+};
+```
