@@ -223,3 +223,27 @@ var findRedundantConnection = function(edges) {
     return [0];
 };
 ```
+[剑指 Offer 34. 二叉树中和为某一值的路径](https://leetcode-cn.com/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/)
+
+```js
+var pathSum = function(root, sum) {
+    if(!root) return [];
+    let  res = [],path = [];
+    var dfs = (root, sum) =>{
+        path.push(root.val);//选择
+        if(root.left==null&&root.right==null&&root.val === sum){ // 判断
+            res.push([...path]);
+            path.pop();
+            return;
+        }
+        sum -= root.val;
+        // 递归
+        root.left && dfs(root.left, sum);
+        root.right && dfs(root.right, sum);
+        // 撤销选择
+        path.pop();
+    }
+    dfs(root,sum);
+    return res;
+};
+```
