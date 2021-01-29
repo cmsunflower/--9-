@@ -247,3 +247,32 @@ var pathSum = function(root, sum) {
     return res;
 };
 ```
+### 快速排序
+```
+function quickSort(arr) {
+    let len = arr.length;
+    let lo = 0, hi = len - 1;
+    let sort = (arr, lo, hi) => {
+        if (hi <= lo) return;
+        let pivot = lo, 
+            i = lo,
+            j = hi + 1;
+        while (true) {
+            while (arr[++i] < arr[pivot]){
+                if (hi <= i) break;
+            }
+            while (arr[pivot] < arr[--j]) {
+                if (j <= lo) break;
+            }
+            if (j <= i) break;
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        // 交换指定的区域
+        [arr[pivot], arr[j]] = [arr[j], arr[pivot]];
+        sort(arr, lo, j - 1);
+        sort(arr, j + 1, hi);
+        return arr;
+    }
+    return sort(arr, lo, hi);   
+}
+```
