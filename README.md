@@ -276,3 +276,21 @@ function quickSort(arr) {
     return sort(arr, lo, hi);   
 }
 ```
+[643. 子数组最大平均数 I](https://leetcode-cn.com/problems/maximum-average-subarray-i/)
+先算出，第一个k长数组的和，在接着遍历，滑动窗口，加新的一位，减掉原窗口的一位，取最大值
+```
+var findMaxAverage = function(nums, k) {
+   // 前缀和
+   let n = nums.length;
+   let sum = 0;
+   sum = nums.slice(0, k)
+        .reduce((prev, cur) => prev += cur);
+    let temp = sum;
+    for (let i = k; i < n; i++) {
+        temp = temp - nums[i-k] + nums[i];
+        console.log(temp)
+        sum = Math.max(temp, sum);
+    }
+    return sum / k;
+};
+```
