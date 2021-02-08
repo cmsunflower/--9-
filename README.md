@@ -277,6 +277,7 @@ function quickSort(arr) {
 }
 ```
 [643. 子数组最大平均数 I](https://leetcode-cn.com/problems/maximum-average-subarray-i/)
+
 先算出，第一个k长数组的和，在接着遍历，滑动窗口，加新的一位，减掉原窗口的一位，取最大值
 ```
 var findMaxAverage = function(nums, k) {
