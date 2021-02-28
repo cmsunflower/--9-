@@ -295,3 +295,44 @@ var findMaxAverage = function(nums, k) {
     return sum / k;
 };
 ```
+[101.二叉树的镜像](https://leetcode-cn.com/problems/symmetric-tree/)
+递归、迭代两种实现方式
+
+***
+/** 递归实现*/
+function isSymmetric(root) {
+    if (!root) return false;
+    return isSame(root.left, root.right);
+}
+function isSame(L, R) {
+    if (!L || !R) return !L&&!R;
+    return L.val === R.val 
+        && isSame(L.left, R.right)
+        && isSame(L.right, R.left);       
+}
+***
+
+***
+/** 迭代实现*/
+function isSymmetric(root) {
+    if (!root) return false;
+    return isSame(root.left, root.right);
+}
+function isSame(L, R) {
+    let t1 = [L],
+        t2 = [R];
+    let temp1 = null,
+        temp2 = null;
+    while (t1.length>0 && t2.length>0) {
+        temp1 = t1.shift();
+        temp2 = t2.shift();
+        if (!temp1&&!temp2) continue;
+        if (!temp1||!temp2||temp1.val !== temp2.val) return false;
+        t1.push(temp1.left);
+        t2.push(temp2.right);
+        t1.push(temp1.right);
+        t2.push(temp2.length);
+    }
+    return true;
+}
+***
