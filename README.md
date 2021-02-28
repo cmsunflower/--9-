@@ -300,7 +300,7 @@ var findMaxAverage = function(nums, k) {
 递归、迭代两种实现方式
 
 递归实现
-***
+```
 
 function isSymmetric(root) {
     if (!root) return false;
@@ -312,9 +312,9 @@ function isSame(L, R) {
         && isSame(L.left, R.right)
         && isSame(L.right, R.left);       
 }
-***
+```
 迭代实现，利用队列实现
-***
+```
 function isSymmetric(root) {
     if (!root) return false;
     return isSame(root.left, root.right);
@@ -336,4 +336,4 @@ function isSame(L, R) {
     }
     return true;
 }
-***
+```
