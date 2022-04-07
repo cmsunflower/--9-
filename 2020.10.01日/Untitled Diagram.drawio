@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-07T01:59:14.921Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36" etag="gcIT6cT9OAoKYDC7ibVB" version="17.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-07T02:57:16.255Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36" etag="plggoC0Tg7NtovVn-g9Z" version="17.4.0" type="github">
   <diagram id="4dZho1Ass9YRCE9xIyum" name="Page-1">
     <mxGraphModel dx="3532" dy="682" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1059,7 +1059,10 @@
         <mxCell id="1D5hdbnbZwoGuq7y65bR-1" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 16px ; line-height: 24px&quot;&gt;&lt;span style=&quot;color: #dcdcaa&quot;&gt;markRootUpdated&lt;/span&gt;(&lt;span style=&quot;color: #9cdcfe&quot;&gt;root&lt;/span&gt;, &lt;span style=&quot;color: #9cdcfe&quot;&gt;lane&lt;/span&gt;, &lt;span style=&quot;color: #9cdcfe&quot;&gt;eventTime&lt;/span&gt;)&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=default;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
           <mxGeometry x="-1043.835" y="3557.5" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1D5hdbnbZwoGuq7y65bR-3" value="" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=default;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=10;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="1D5hdbnbZwoGuq7y65bR-3" target="1D5hdbnbZwoGuq7y65bR-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-3" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 16px ; line-height: 24px&quot;&gt;&lt;span style=&quot;color: #dcdcaa&quot;&gt;ensureRootIsScheduled&lt;/span&gt;(&lt;span style=&quot;color: #9cdcfe&quot;&gt;root&lt;/span&gt;, &lt;span style=&quot;color: #9cdcfe&quot;&gt;eventTime&lt;/span&gt;);&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=default;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
           <mxGeometry x="-1043.835" y="3697.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="1D5hdbnbZwoGuq7y65bR-5" value="pendingLanes" style="swimlane;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
@@ -1070,6 +1073,41 @@
         </mxCell>
         <mxCell id="1D5hdbnbZwoGuq7y65bR-6" value="创建：FiberRootNode" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1D5hdbnbZwoGuq7y65bR-5">
           <mxGeometry x="10" y="50" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-8" value="&lt;p style=&quot;margin: 0px ; margin-top: 10px ; margin-left: 10px ; text-align: left&quot;&gt;&lt;b&gt;更新pendingLanes和&lt;/b&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 16px ; text-align: center&quot;&gt;eventTimes&lt;/span&gt;&lt;/p&gt;&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 16px ; line-height: 24px&quot;&gt;&lt;span style=&quot;color: #9cdcfe&quot;&gt;suspendedLanes = 0&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 16px ; line-height: 24px&quot;&gt;&lt;div style=&quot;line-height: 24px&quot;&gt;&lt;span style=&quot;color: #9cdcfe&quot;&gt;pingedLanes = 0&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=note;html=1;size=15;spacingLeft=5;align=left;html=1;overflow=fill;whiteSpace=wrap;align=center;fontFamily=Times New Roman;fontSize=10;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="-870" y="3477.5" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-10" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;dashed=1;fontFamily=Times New Roman;fontSize=10;" edge="1" source="1D5hdbnbZwoGuq7y65bR-8" target="1D5hdbnbZwoGuq7y65bR-1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-735.2499999999995" y="3578" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;startSize=23;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="1D5hdbnbZwoGuq7y65bR-11" target="1D5hdbnbZwoGuq7y65bR-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;startSize=23;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="1D5hdbnbZwoGuq7y65bR-11" target="1D5hdbnbZwoGuq7y65bR-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-11" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 16px ; line-height: 24px&quot;&gt;&lt;span style=&quot;color: #dcdcaa&quot;&gt;markStarvedLanesAsExpired&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=default;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="-843.835" y="3697.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-14" value="expirationTimes" style="swimlane;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="-2150" y="2910" width="280" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-16" value="创建：FiberRootNode，长度为32，每个值都是-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1D5hdbnbZwoGuq7y65bR-14">
+          <mxGeometry x="10" y="50" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-19" value="清空过期lane，将非阻塞，但是ping的lane更新一个新的过期时间" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=default;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="-843.835" y="3837.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;startSize=23;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="1D5hdbnbZwoGuq7y65bR-21" target="1D5hdbnbZwoGuq7y65bR-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-21" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 16px ; line-height: 24px&quot;&gt;&lt;span style=&quot;color: #569cd6&quot;&gt;var&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe&quot;&gt;nextLanes&lt;/span&gt; = &lt;span style=&quot;color: #dcdcaa&quot;&gt;getNextLanes&lt;/span&gt;(&lt;span style=&quot;color: #9cdcfe&quot;&gt;root&lt;/span&gt;, &lt;span style=&quot;color: #9cdcfe&quot;&gt;root&lt;/span&gt; === &lt;span style=&quot;color: #9cdcfe&quot;&gt;workInProgressRoot&lt;/span&gt; ? &lt;span style=&quot;color: #9cdcfe&quot;&gt;workInProgressRootRenderLanes&lt;/span&gt; : &lt;span style=&quot;color: #9cdcfe&quot;&gt;NoLanes&lt;/span&gt;);&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=default;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="-643.83" y="3697.5" width="293.84" height="62.5" as="geometry" />
+        </mxCell>
+        <mxCell id="1D5hdbnbZwoGuq7y65bR-23" value="" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=default;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="-556.9100000000001" y="3841.25" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
