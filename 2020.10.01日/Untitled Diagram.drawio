@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-22T01:45:42.974Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="I7z8jsFUCCU8sVPa1aLH" version="17.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-22T02:47:16.197Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="_RVQ7rihOcTINc8LvkRl" version="17.4.6" type="github">
   <diagram id="4dZho1Ass9YRCE9xIyum" name="Page-1">
     <mxGraphModel dx="2845" dy="236" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1219,8 +1219,81 @@
         <mxCell id="C_dNRcrrDnUsvUy1VfYT-37" value="&lt;div style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 10px ; line-height: 24px&quot;&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;port&lt;/span&gt;.&lt;span style=&quot;font-size: 10px&quot;&gt;postMessage&lt;/span&gt;(&lt;span style=&quot;font-size: 10px&quot;&gt;null&lt;/span&gt;)&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=none;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
           <mxGeometry x="991.97" y="4740" width="165.35" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=10;fontColor=#000000;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="C_dNRcrrDnUsvUy1VfYT-39" target="C_dNRcrrDnUsvUy1VfYT-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="C_dNRcrrDnUsvUy1VfYT-39" value="&lt;div style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 24px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;performWorkUntilDeadline（）&lt;/font&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=none;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
           <mxGeometry x="971.97" y="4810" width="205.35" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=10;fontColor=#000000;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="C_dNRcrrDnUsvUy1VfYT-43" target="C_dNRcrrDnUsvUy1VfYT-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-47" value="不等于null" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontFamily=Times New Roman;fontColor=#000000;" vertex="1" connectable="0" parent="C_dNRcrrDnUsvUy1VfYT-46">
+          <mxGeometry x="0.0396" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-43" value="&lt;div style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 24px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;scheduledHostCallback&lt;/font&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=none;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="1241" y="4782.5" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=10;fontColor=#000000;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="C_dNRcrrDnUsvUy1VfYT-45" target="C_dNRcrrDnUsvUy1VfYT-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-45" value="&lt;div style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 24px ; font-size: 10px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;hasTimeRemaining = true&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 24px ; font-size: 10px&quot;&gt;&lt;div style=&quot;line-height: 24px ; font-size: 10px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;hasMoreWork = true&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=none;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="1516" y="4795" width="174" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=10;fontColor=#000000;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="C_dNRcrrDnUsvUy1VfYT-48" target="C_dNRcrrDnUsvUy1VfYT-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-48" value="&lt;div style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 16px ; line-height: 24px&quot;&gt;scheduledHostCallback(hasTimeRemaining, currentTime)&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=none;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="1797" y="4797.19" width="503" height="50.63" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=10;fontColor=#000000;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="C_dNRcrrDnUsvUy1VfYT-50" target="C_dNRcrrDnUsvUy1VfYT-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-50" value="&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;span style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 10px&quot;&gt;flushWork(&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 10px&quot;&gt;hasTimeRemaining,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 10px&quot;&gt;currentTime&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 10px&quot;&gt;)&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=none;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="1895.94" y="4900" width="305.12" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=10;fontColor=#000000;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="C_dNRcrrDnUsvUy1VfYT-54" target="C_dNRcrrDnUsvUy1VfYT-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-54" value="&lt;div style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 10px ; line-height: 24px&quot;&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;isHostCallbackScheduled&lt;/span&gt; = &lt;span style=&quot;font-size: 10px&quot;&gt;false&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=none;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="2260" y="4905" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-56" value="&lt;span style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;unstable_scheduleCallback函数中置为true&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontFamily=Times New Roman;fontSize=10;fontColor=#000000;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="2245" y="4880" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=10;fontColor=#000000;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="C_dNRcrrDnUsvUy1VfYT-57" target="C_dNRcrrDnUsvUy1VfYT-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-61" value="等于true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontFamily=Times New Roman;fontColor=#000000;" vertex="1" connectable="0" parent="C_dNRcrrDnUsvUy1VfYT-60">
+          <mxGeometry y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=10;fontColor=#000000;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="C_dNRcrrDnUsvUy1VfYT-57" target="C_dNRcrrDnUsvUy1VfYT-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-57" value="&lt;div style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 24px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;isHostTimeoutScheduled&lt;/font&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=none;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="2550" y="4880" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-59" value="&lt;div style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 10px ; line-height: 24px&quot;&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;isHostTimeoutScheduled&lt;/span&gt; = &lt;span style=&quot;font-size: 10px&quot;&gt;false&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;    &lt;span style=&quot;font-size: 10px&quot;&gt;cancelHostTimeout&lt;/span&gt;()&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=none;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="2850" y="4895" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-62" value="此时在调度超时的任务，需要取消" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontFamily=Times New Roman;fontSize=10;fontColor=#000000;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="2740" y="4850" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=10;fontColor=#000000;" edge="1" parent="Dvxityr_QrDPXOR2Zddf-1" source="C_dNRcrrDnUsvUy1VfYT-63" target="C_dNRcrrDnUsvUy1VfYT-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-63" value="&lt;div style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 10px ; line-height: 24px&quot;&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;isPerformingWork&lt;/span&gt; = &lt;span style=&quot;font-size: 10px&quot;&gt;true&lt;/span&gt;;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;  &lt;span style=&quot;font-size: 10px&quot;&gt;var&lt;/span&gt; &lt;span style=&quot;font-size: 10px&quot;&gt;previousPriorityLevel&lt;/span&gt; = &lt;span style=&quot;font-size: 10px&quot;&gt;currentPriorityLevel&lt;/span&gt;;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=none;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="2460" y="5020" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-65" value="开始进入ActQueue，执行任务，结束任务调度" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontFamily=Times New Roman;fontSize=10;fontColor=#000000;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="2645" y="4980" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="C_dNRcrrDnUsvUy1VfYT-67" value="&lt;div style=&quot;font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 10px ; line-height: 24px&quot;&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;workLoop&lt;/span&gt;(&lt;span style=&quot;font-size: 10px&quot;&gt;hasTimeRemaining&lt;/span&gt;, &lt;span style=&quot;font-size: 10px&quot;&gt;initialTime&lt;/span&gt;)&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fontFamily=Times New Roman;fontColor=#000000;rounded=1;labelBackgroundColor=none;" vertex="1" parent="Dvxityr_QrDPXOR2Zddf-1">
+          <mxGeometry x="2495" y="5110" width="290" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
